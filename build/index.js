@@ -196,7 +196,9 @@ function save({
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
     src: attributes.previewIMG,
     alt: "A preview of a portfolio project"
-  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
+  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "project-text"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
     className: "title",
     tagName: "h5",
     value: attributes.title
@@ -204,7 +206,7 @@ function save({
     className: "description",
     tagName: "p",
     value: attributes.description
-  })));
+  }))));
 }
 
 /***/ }),

@@ -5,8 +5,24 @@
  */
 
 .wp-block-tv-portfolio-project-blocks {
-	border: 1px dotted #f00;
-	background-color: lightgray;
+	border: 2px solid #333;
+	padding: 20px;
+	margin-bottom: 20px;
+	background-color: #f0f0f0;
 
+	.body{
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+	}
+	.title .description .projectPreview {
+		padding: 10px;
+		border: 1px solid #ccc;
+		background-color: #fff;
+	}
+	.projectPreview img{
+		max-width: 100%;
+		height: auto;
+	}
 }
 

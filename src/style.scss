@@ -6,11 +6,30 @@
  */
 
 .wp-block-tv-portfolio-project-blocks {
-	background-color: lightgrey;
-	color: #000;
-	padding: 2px;
+	.body {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		padding: 20px;
+		background-color: #f5f5f5;
+		border: 1px solid black;
+		border-radius: 5px;
+		margin-bottom: 20px;
+	}
+	.projectPreview img {
+		width: 100px;
+		height: 100px;
+		object-fit: cover;
+		margin-right: 20px;
+	}
+	.project-text{
+		display: flex;
+		flex-direction: column;
+	}
 
-	h5{
-		color: mediumseagreen;
+	.title {
+		font-size: 20px;
+		text-transform: uppercase;
+		margin-bottom: 5px;
 	}
 }

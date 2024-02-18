@@ -19,18 +19,20 @@ export default function save({attributes, setAttributes}) {
 	return (
 		<div {...useBlockProps.save() }>
 			<div className="body">
-			<div className="projectPreview">
-				<img src={attributes.previewIMG} alt="A preview of a portfolio project"/>
-			</div>
+				<div className="projectPreview">
+					<img src={attributes.previewIMG} alt="A preview of a portfolio project"/>
+				</div>
+				<div className="project-text">
+					<RichText.Content className="title"
+									  tagName="h5"
+									  value={attributes.title}
+					/>
 
-			<RichText.Content className="title"
-							  tagName="h5"
-							  value={attributes.title}
-			/>
-			<RichText.Content className="description"
-							  tagName="p"
-							  value={attributes.description}
-			/>
+					<RichText.Content className="description"
+									  tagName="p"
+									  value={attributes.description}
+					/>
+				</div>
 			</div>
 		</div>
 	);
