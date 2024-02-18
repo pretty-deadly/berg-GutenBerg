@@ -4,7 +4,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps, RichText } from '@wordpress/block-editor';
+import {useBlockProps, RichText} from '@wordpress/block-editor';
 
 /**
  * The save function defines the way in which the different attributes should
@@ -17,7 +17,7 @@ import { useBlockProps, RichText } from '@wordpress/block-editor';
  */
 export default function save({attributes, setAttributes}) {
 	return (
-		<div {...useBlockProps.save() }>
+		<div {...useBlockProps.save()}>
 			<div className="body">
 				<div className="projectPreview">
 					<img src={attributes.previewIMG} alt="A preview of a portfolio project"/>
@@ -34,6 +34,8 @@ export default function save({attributes, setAttributes}) {
 					/>
 				</div>
 			</div>
+
 		</div>
+
 	);
 }
