@@ -6,7 +6,7 @@
   "title": "Projects",
   "category": "design",
   "icon": "index-card",
-  "description": "A block to help display portfolio level projects.",
+  "description": "A block to help display porfolio level projects.",
   "example": {},
   "supports": {
     "html": false
@@ -26,15 +26,6 @@
       "type": "string",
       "source": "html",
       "selector": ".title"
-    },
-    "description": {
-      "type": "string",
-      "source": "html",
-      "selector": ".description"
-    },
-    "previewIMG": {
-      "type": "string",
-      "default": "https://placehold.it/75"
     }
   }
 }

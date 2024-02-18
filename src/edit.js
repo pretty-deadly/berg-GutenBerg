@@ -11,7 +11,7 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps, RichText } from '@wordpress/block-editor';
+import {useBlockProps, RichText, MediaUploadCheck, MediaUpload} from '@wordpress/block-editor';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -33,6 +33,19 @@ export default function Edit({attributes, setAttributes}) {
 	return (
 		<div { ...useBlockProps() }>
 			<div className="body">
+				<div className="projectPreview">
+					<MediaUploadCheck>
+						<MediaUpload
+							allowedTypes={['images']}
+							onSelect={file => {console.log(file); setAttributes({previewIMG: file.sizes.thumbnail.url})}}
+							render={({open}) => <img src={attributes.previewIMG}
+														alt="upload a photo"
+														onClick={open}
+						/>}
+					/>
+					</MediaUploadCheck>
+				</div>
+
 
 			<RichText className="title"
 					  tagName="h5"

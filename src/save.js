@@ -15,11 +15,13 @@ import { useBlockProps, RichText } from '@wordpress/block-editor';
  *
  * @return {Element} Element to render.
  */
-export default function save({attributes}) {
+export default function save({attributes, setAttributes}) {
 	return (
 		<div {...useBlockProps.save() }>
 			<div className="body">
-
+			<div className="projectPreview">
+				<img src={attributes.previewIMG} alt="A preview of a portfolio project"/>
+			</div>
 
 			<RichText.Content className="title"
 							  tagName="h5"

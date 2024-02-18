@@ -59,24 +59,7 @@ function Edit({
     ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)()
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "body"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "projectPreview"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.MediaUploadCheck, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.MediaUpload, {
-    allowedTypes: ['images'],
-    onSelect: file => {
-      console.log(file);
-      setAttributes({
-        previewIMG: file.sizes.thumbnail.url
-      });
-    },
-    render: ({
-      open
-    }) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
-      src: attributes.previewIMG,
-      alt: "upload a photo",
-      onClick: open
-    })
-  }))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
     className: "title",
     tagName: "h5",
     placeholder: "A Cool Project",
@@ -184,19 +167,13 @@ __webpack_require__.r(__webpack_exports__);
  * @return {Element} Element to render.
  */
 function save({
-  attributes,
-  setAttributes
+  attributes
 }) {
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ..._wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save()
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "body"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "projectPreview"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
-    src: attributes.previewIMG,
-    alt: "A preview of a portfolio project"
-  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
     className: "title",
     tagName: "h5",
     value: attributes.title
@@ -279,7 +256,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"tv/portfolio-project-blocks","version":"0.1.0","title":"Projects","category":"design","icon":"index-card","description":"A block to help display portfolio level projects.","example":{},"supports":{"html":false},"textdomain":"portfolio-project-blocks","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js","keywords":["projects","project","tv"],"attributes":{"title":{"type":"string","source":"html","selector":".title"},"description":{"type":"string","source":"html","selector":".description"},"previewIMG":{"type":"string","default":"https://placehold.it/75"}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"tv/portfolio-project-blocks","version":"0.1.0","title":"Projects","category":"design","icon":"index-card","description":"A block to help display portfolio level projects.","example":{},"supports":{"html":false},"textdomain":"portfolio-project-blocks","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js","keywords":["projects","project","tv"],"attributes":{"title":{"type":"string","source":"html","selector":".title"},"description":{"type":"string","source":"html","selector":".description"}}}');
 
 /***/ })
 
