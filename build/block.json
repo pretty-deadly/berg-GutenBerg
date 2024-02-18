@@ -26,6 +26,11 @@
       "type": "string",
       "source": "html",
       "selector": ".title"
+    },
+    "description": {
+      "type": "string",
+      "source": "html",
+      "selector": ".description"
     }
   }
 }

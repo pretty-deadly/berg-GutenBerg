@@ -23,9 +23,12 @@ export default function save({attributes}) {
 
 			<RichText.Content className="title"
 							  tagName="h5"
-							  value={attributes.title}/>
-			<p>This a description of my project and the tools I used to make it, including
-				frameworks.</p>
+							  value={attributes.title}
+			/>
+			<RichText.Content className="description"
+							  tagName="p"
+							  value={attributes.description}
+			/>
 			</div>
 		</div>
 	);

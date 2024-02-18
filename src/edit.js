@@ -40,8 +40,12 @@ export default function Edit({attributes, setAttributes}) {
 					  value={attributes.title}
 					  onChange={ (title) => setAttributes( {title})}
 					  />
-
-			<p className="description">This a description of my project and the tools I used to make it, including frameworks.</p>
+				<RichText className="description"
+						  tagName="p"
+						  placeholder="This a description of my project and the tools I used to make it, including frameworks."
+						  value={attributes.description}
+						  onChange={ (description) => setAttributes({description})}
+						  />
 			</div>
 		</div>
 	);
