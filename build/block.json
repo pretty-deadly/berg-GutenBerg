@@ -6,7 +6,7 @@
   "title": "Projects",
   "category": "design",
   "icon": "index-card",
-  "description": "A block to help display porfolio level projects.",
+  "description": "A block to help display portfolio level projects.",
   "example": {},
   "supports": {
     "html": false
@@ -15,5 +15,17 @@
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css",
-  "viewScript": "file:./view.js"
+  "viewScript": "file:./view.js",
+  "keywords": [
+    "projects",
+    "project",
+    "tv"
+  ],
+  "attributes": {
+    "title": {
+      "type": "string",
+      "source": "html",
+      "selector": ".title"
+    }
+  }
 }

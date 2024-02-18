@@ -11,7 +11,7 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps, RichText } from '@wordpress/block-editor';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -29,13 +29,20 @@ import './editor.scss';
  *
  * @return {Element} Element to render.
  */
-export default function Edit() {
+export default function Edit({attributes, setAttributes}) {
 	return (
-		<p { ...useBlockProps() }>
-			{ __(
-				'Projects – hello from the editor!',
-				'portfolio-project-blocks'
-			) }
-		</p>
+		<div { ...useBlockProps() }>
+			<div className="body">
+
+			<RichText className="title"
+					  tagName="h5"
+					  placeholder="A Cool Project"
+					  value={attributes.title}
+					  onChange={ (title) => setAttributes( {title})}
+					  />
+
+			<p className="description">This a description of my project and the tools I used to make it, including frameworks.</p>
+			</div>
+		</div>
 	);
 }
