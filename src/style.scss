@@ -41,4 +41,16 @@
 		text-transform: uppercase;
 		margin-bottom: 5px;
 	}
+	.button{
+		border: 1px solid #cccccc;
+		width: 200px;
+		padding:8px 15px;
+		border-radius: 3px;
+	}
+	.project-button a:hover{
+		border:3px solid maroon;
+		background-color: #ccc;
+		font-weight: bold;
+	}
+
 }

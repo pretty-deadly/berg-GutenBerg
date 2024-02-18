@@ -76,7 +76,7 @@ function Edit({
       alt: "upload a photo",
       onClick: open
     })
-  }))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
+  }))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, "Title of Project:"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
     className: "title",
     tagName: "h5",
     placeholder: "A Cool Project",
@@ -84,13 +84,21 @@ function Edit({
     onChange: title => setAttributes({
       title
     })
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, "Description of Project:"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
     className: "description",
     tagName: "p",
     placeholder: "This a description of my project and the tools I used to make it, including frameworks.",
     value: attributes.description,
     onChange: description => setAttributes({
       description
+    })
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, "Project Link:"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
+    className: "link",
+    tagName: "p",
+    placeholder: "reallycoolproject.com",
+    value: attributes.link,
+    onChange: link => setAttributes({
+      link
     })
   })));
 }
@@ -206,7 +214,12 @@ function save({
     className: "description",
     tagName: "p",
     value: attributes.description
-  }))));
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "project-button"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
+    href: attributes.link,
+    className: "button"
+  }, "View Project")))));
 }
 
 /***/ }),
@@ -281,7 +294,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"tv/portfolio-project-blocks","version":"0.1.0","title":"Projects","category":"design","icon":"index-card","description":"A block to help display portfolio level projects.","example":{},"supports":{"html":false},"textdomain":"portfolio-project-blocks","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js","keywords":["projects","project","tv"],"attributes":{"title":{"type":"string","source":"html","selector":".title"},"description":{"type":"string","source":"html","selector":".description"},"previewIMG":{"type":"string","default":"https://placehold.it/75"}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"tv/portfolio-project-blocks","version":"0.1.0","title":"Projects","category":"design","icon":"index-card","description":"A block to help display portfolio level projects.","example":{},"supports":{"html":false},"textdomain":"portfolio-project-blocks","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js","keywords":["projects","project","tv"],"attributes":{"title":{"type":"string","source":"html","selector":".title"},"description":{"type":"string","source":"html","selector":".description"},"previewIMG":{"type":"string","default":"https://placehold.it/75"},"link":{"type":"string","source":"html","selector":".link"}}}');
 
 /***/ })
 

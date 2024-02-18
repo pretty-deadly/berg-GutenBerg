@@ -35,6 +35,11 @@
     "previewIMG": {
       "type": "string",
       "default": "https://placehold.it/75"
+    },
+    "link": {
+      "type": "string",
+      "source": "html",
+      "selector": ".link"
     }
   }
 }

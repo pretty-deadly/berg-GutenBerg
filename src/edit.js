@@ -37,27 +37,38 @@ export default function Edit({attributes, setAttributes}) {
 					<MediaUploadCheck>
 						<MediaUpload
 							allowedTypes={['images']}
-							onSelect={file => {console.log(file); setAttributes({previewIMG: file.sizes.thumbnail.url})}}
+							onSelect={file => {
+								console.log(file);
+								setAttributes({previewIMG: file.sizes.thumbnail.url})
+							}}
 							render={({open}) => <img src={attributes.previewIMG}
-														alt="upload a photo"
-														onClick={open}
-						/>}
-					/>
+													 alt="upload a photo"
+													 onClick={open}
+							/>}
+						/>
 					</MediaUploadCheck>
 				</div>
 
-
-			<RichText className="title"
-					  tagName="h5"
-					  placeholder="A Cool Project"
-					  value={attributes.title}
-					  onChange={ (title) => setAttributes( {title})}
-					  />
+				<p>Title of Project:</p>
+				<RichText className="title"
+						  tagName="h5"
+						  placeholder="A Cool Project"
+						  value={attributes.title}
+						  onChange={(title) => setAttributes({title})}
+				/>
+				<p>Description of Project:</p>
 				<RichText className="description"
 						  tagName="p"
 						  placeholder="This a description of my project and the tools I used to make it, including frameworks."
 						  value={attributes.description}
-						  onChange={ (description) => setAttributes({description})}
+						  onChange={(description) => setAttributes({description})}
+				/>
+				<p>Project Link:</p>
+				<RichText className="link"
+						  tagName="p"
+						  placeholder="reallycoolproject.com"
+						  value={attributes.link}
+						  onChange={(link) => setAttributes({link})}
 						  />
 			</div>
 		</div>

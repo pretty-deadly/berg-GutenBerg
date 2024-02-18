@@ -7,7 +7,7 @@
  * Replace them with your own styles or remove the file completely.
  */
 .wp-block-tv-portfolio-project-blocks {
-  border: 2px solid #333;
+  border: 2px solid #333333;
   padding: 20px;
   margin-bottom: 20px;
   background-color: #f0f0f0;
@@ -17,14 +17,17 @@
   flex-direction: column;
   gap: 15px;
 }
-.wp-block-tv-portfolio-project-blocks .title .description .projectPreview {
+.wp-block-tv-portfolio-project-blocks .body .title, .wp-block-tv-portfolio-project-blocks .body .description, .wp-block-tv-portfolio-project-blocks .body .link {
   padding: 10px;
-  border: 1px solid #ccc;
-  background-color: #fff;
+  border: 1px solid #93f1ff;
+  background-color: #ffffff;
 }
 .wp-block-tv-portfolio-project-blocks .projectPreview img {
   max-width: 100%;
   height: auto;
+}
+.wp-block-tv-portfolio-project-blocks p {
+  margin-bottom: -20px;
 }
 
 /*# sourceMappingURL=index.css.map*/

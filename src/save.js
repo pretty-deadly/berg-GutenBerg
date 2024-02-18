@@ -32,6 +32,9 @@ export default function save({attributes, setAttributes}) {
 									  tagName="p"
 									  value={attributes.description}
 					/>
+					<div className="project-button">
+						<a href={attributes.link} className="button">View Project</a>
+					</div>
 				</div>
 			</div>
 

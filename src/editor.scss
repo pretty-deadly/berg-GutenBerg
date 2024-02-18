@@ -5,7 +5,7 @@
  */
 
 .wp-block-tv-portfolio-project-blocks {
-	border: 2px solid #333;
+	border: 2px solid #333333;
 	padding: 20px;
 	margin-bottom: 20px;
 	background-color: #f0f0f0;
@@ -14,15 +14,22 @@
 		display: flex;
 		flex-direction: column;
 		gap: 15px;
+
+		.title, .description, .link{
+			padding: 10px;
+			border: 1px solid #93f1ff;
+			background-color: #ffffff;
+
+		}
+
 	}
-	.title .description .projectPreview {
-		padding: 10px;
-		border: 1px solid #ccc;
-		background-color: #fff;
-	}
+
 	.projectPreview img{
 		max-width: 100%;
 		height: auto;
+	}
+	p{
+		margin-bottom: -20px;
 	}
 }
 
