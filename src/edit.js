@@ -20,6 +20,7 @@ import {useBlockProps, RichText, MediaUploadCheck, MediaUpload} from '@wordpress
  * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
  */
 import './editor.scss';
+import {BlockSettings} from "./BlockSettings";
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -30,8 +31,11 @@ import './editor.scss';
  * @return {Element} Element to render.
  */
 export default function Edit({attributes, setAttributes}) {
+	const buttonClass = `project-link-button ${attributes.buttonAlignment}`;
+
 	return (
 		<div { ...useBlockProps() }>
+			<BlockSettings attributes = {attributes} setAttributes={setAttributes}/>
 			<div className="body">
 				<div className="projectPreview">
 					<MediaUploadCheck>
@@ -64,12 +68,16 @@ export default function Edit({attributes, setAttributes}) {
 						  onChange={(description) => setAttributes({description})}
 				/>
 				<p>Project Link:</p>
+
+				<div className={buttonClass}>
 				<RichText className="link"
-						  tagName="p"
+						  tagName="a"
 						  placeholder="reallycoolproject.com"
 						  value={attributes.link}
 						  onChange={(link) => setAttributes({link})}
+
 						  />
+				</div>
 			</div>
 		</div>
 	);

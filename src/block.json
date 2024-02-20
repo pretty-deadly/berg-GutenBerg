@@ -36,6 +36,10 @@
 			"type": "string",
 			"source": "html",
 			"selector": ".link"
+		},
+		"buttonAlignment":{
+			"type": "string",
+			"default": "left"
 		}
 	}
 }

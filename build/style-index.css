@@ -52,5 +52,15 @@
   background-color: #ccc;
   font-weight: bold;
 }
+.wp-block-tv-portfolio-project-blocks .project-link-button-left {
+  display: inline-block;
+  margin-left: 0;
+  margin-right: auto;
+}
+.wp-block-tv-portfolio-project-blocks .project-link-button-right {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: 0;
+}
 
 /*# sourceMappingURL=style-index.css.map*/

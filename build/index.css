@@ -29,5 +29,11 @@
 .wp-block-tv-portfolio-project-blocks p {
   margin-bottom: -20px;
 }
+.wp-block-tv-portfolio-project-blocks .align-right {
+  text-align: right;
+}
+.wp-block-tv-portfolio-project-blocks .align-left {
+  text-align: left;
+}
 
 /*# sourceMappingURL=index.css.map*/

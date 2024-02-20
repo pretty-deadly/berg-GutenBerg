@@ -16,6 +16,8 @@ import {useBlockProps, RichText} from '@wordpress/block-editor';
  * @return {Element} Element to render.
  */
 export default function save({attributes, setAttributes}) {
+	const buttonClass = `project-link-button-${attributes.buttonAlignment}`;
+
 	return (
 		<div {...useBlockProps.save()}>
 			<div className="body">
@@ -32,7 +34,7 @@ export default function save({attributes, setAttributes}) {
 									  tagName="p"
 									  value={attributes.description}
 					/>
-					<div className="project-button">
+					<div className={buttonClass}>
 						<a href={attributes.link} className="button">View Project</a>
 					</div>
 				</div>
