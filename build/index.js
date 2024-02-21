@@ -33,18 +33,29 @@ class BlockSettings extends (react__WEBPACK_IMPORTED_MODULE_0___default().Compon
       initialOpen: true
     }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.RadioControl, {
       label: "Button Alignment",
-      selected: attributes.buttonAlignment // Use the selected attribute
-      ,
+      selected: attributes.buttonAlignment,
       onChange: buttonAlignment => setAttributes({
         buttonAlignment
-      }) // Update the attribute when changed
-      ,
+      }),
       options: [{
         label: 'Align Left',
         value: 'left'
       }, {
         label: 'Align Right',
         value: 'right'
+      }]
+    })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.RadioControl, {
+      label: "Card Layout",
+      selected: attributes.layoutDirection,
+      onChange: layoutDirection => setAttributes({
+        layoutDirection
+      }),
+      options: [{
+        label: 'Horizontal',
+        value: 'horizontal'
+      }, {
+        label: 'Vertical',
+        value: 'vertical'
       }]
     }))));
   }
@@ -108,6 +119,7 @@ function Edit({
   setAttributes
 }) {
   const buttonClass = `project-link-button ${attributes.buttonAlignment}`;
+  const layoutClass = `card-layout-${attributes.layoutDirection}`;
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)()
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_BlockSettings__WEBPACK_IMPORTED_MODULE_4__.BlockSettings, {
@@ -254,10 +266,13 @@ function save({
   setAttributes
 }) {
   const buttonClass = `project-link-button-${attributes.buttonAlignment}`;
+  const layoutClass = `card-layout-${attributes.layoutDirection}`;
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ..._wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save()
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "body"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: `card ${layoutClass}`
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "projectPreview"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
@@ -278,7 +293,7 @@ function save({
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
     href: attributes.link,
     className: "button"
-  }, "View Project")))));
+  }, "View Project"))))));
 }
 
 /***/ }),

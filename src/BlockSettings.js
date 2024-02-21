@@ -12,11 +12,22 @@ export class BlockSettings extends React.Component {
 					<PanelRow>
 						<RadioControl
 							label="Button Alignment"
-							selected={attributes.buttonAlignment} // Use the selected attribute
-							onChange={(buttonAlignment) => setAttributes({ buttonAlignment })} // Update the attribute when changed
+							selected={attributes.buttonAlignment}
+							onChange={(buttonAlignment) => setAttributes({ buttonAlignment })}
 							options={[
 								{ label: 'Align Left', value: 'left' },
 								{ label: 'Align Right', value: 'right' },
+							]}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<RadioControl
+							label="Card Layout"
+							selected={attributes.layoutDirection}
+							onChange={(layoutDirection) => setAttributes({ layoutDirection })}
+							options={[
+								{ label: 'Horizontal', value: 'horizontal' },
+								{ label: 'Vertical', value: 'vertical' },
 							]}
 						/>
 					</PanelRow>

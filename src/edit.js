@@ -32,12 +32,14 @@ import {BlockSettings} from "./BlockSettings";
  */
 export default function Edit({attributes, setAttributes}) {
 	const buttonClass = `project-link-button ${attributes.buttonAlignment}`;
+	const layoutClass = `card-layout-${attributes.layoutDirection}`;
 
 	return (
 		<div { ...useBlockProps() }>
 			<BlockSettings attributes = {attributes} setAttributes={setAttributes}/>
 			<div className="body">
-				<div className="projectPreview">
+
+					<div className="projectPreview">
 					<MediaUploadCheck>
 						<MediaUpload
 							allowedTypes={['images']}
@@ -51,33 +53,34 @@ export default function Edit({attributes, setAttributes}) {
 							/>}
 						/>
 					</MediaUploadCheck>
-				</div>
+					</div>
 
-				<p>Title of Project:</p>
-				<RichText className="title"
-						  tagName="h5"
-						  placeholder="A Cool Project"
-						  value={attributes.title}
-						  onChange={(title) => setAttributes({title})}
-				/>
-				<p>Description of Project:</p>
-				<RichText className="description"
-						  tagName="p"
-						  placeholder="This a description of my project and the tools I used to make it, including frameworks."
-						  value={attributes.description}
-						  onChange={(description) => setAttributes({description})}
-				/>
-				<p>Project Link:</p>
+						<p>Title of Project:</p>
+						<RichText className="title"
+								  tagName="h5"
+								  placeholder="A Cool Project"
+								  value={attributes.title}
+								  onChange={(title) => setAttributes({title})}
+						/>
+						<p>Description of Project:</p>
+						<RichText className="description"
+								  tagName="p"
+								  placeholder="This a description of my project and the tools I used to make it, including frameworks."
+								  value={attributes.description}
+								  onChange={(description) => setAttributes({description})}
+						/>
+						<p>Project Link:</p>
 
-				<div className={buttonClass}>
-				<RichText className="link"
-						  tagName="a"
-						  placeholder="reallycoolproject.com"
-						  value={attributes.link}
-						  onChange={(link) => setAttributes({link})}
+					<div className={buttonClass}>
+						<RichText className="link"
+								  tagName="a"
+								  placeholder="reallycoolproject.com"
+								  value={attributes.link}
+								  onChange={(link) => setAttributes({link})}
 
-						  />
-				</div>
+								  />
+					</div>
+
 			</div>
 		</div>
 	);
