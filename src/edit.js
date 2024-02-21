@@ -32,10 +32,11 @@ import {BlockSettings} from "./BlockSettings";
  */
 export default function Edit({attributes, setAttributes}) {
 	const buttonClass = `project-link-button ${attributes.buttonAlignment}`;
-	const layoutClass = `card-layout-${attributes.layoutDirection}`;
+	// const layoutClass = `card-layout-${attributes.layoutDirection}`;
+	const divStyles = {borderColor: attributes.borderColor};
 
 	return (
-		<div { ...useBlockProps() }>
+		<div { ...useBlockProps({style: divStyles}) }>
 			<BlockSettings attributes = {attributes} setAttributes={setAttributes}/>
 			<div className="body">
 

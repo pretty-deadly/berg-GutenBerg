@@ -18,11 +18,12 @@ import {useBlockProps, RichText} from '@wordpress/block-editor';
 export default function save({attributes, setAttributes}) {
 	const buttonClass = `project-link-button-${attributes.buttonAlignment}`;
 	const layoutClass = `card-layout-${attributes.layoutDirection}`;
+	const divStyles = {borderColor: attributes.borderColor};
 
 	return (
 		<div {...useBlockProps.save()}>
 			<div className="body">
-				<div className={`card ${layoutClass}`}>
+				<div className={`card ${layoutClass}`} style={divStyles}>
 					<div className="projectPreview">
 						<img src={attributes.previewIMG} alt="A preview of a portfolio project"/>
 					</div>

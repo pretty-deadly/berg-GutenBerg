@@ -1,6 +1,6 @@
 import React from "react";
 import { InspectorControls } from "@wordpress/block-editor";
-import { PanelBody, PanelRow, RadioControl } from "@wordpress/components";
+import { PanelBody, PanelRow, ColorPalette, RadioControl } from "@wordpress/components";
 
 export class BlockSettings extends React.Component {
 	render() {
@@ -29,6 +29,22 @@ export class BlockSettings extends React.Component {
 								{ label: 'Horizontal', value: 'horizontal' },
 								{ label: 'Vertical', value: 'vertical' },
 							]}
+						/>
+					</PanelRow>
+					<PanelRow>
+						Border Color
+					</PanelRow>
+					<PanelRow>
+						<ColorPalette
+
+							colors={[
+								{name: 'maroon', color: '#800000FF'},
+								{name: 'black', color: '#000000'},
+								{name: 'dark-grey', color: '#818181'}
+							]}
+							value={attributes.borderColor}
+							onChange={borderColor => setAttributes({borderColor})}
+							disableCustomColors={true}
 						/>
 					</PanelRow>
 				</PanelBody>

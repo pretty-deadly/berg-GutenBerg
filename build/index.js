@@ -57,6 +57,22 @@ class BlockSettings extends (react__WEBPACK_IMPORTED_MODULE_0___default().Compon
         label: 'Vertical',
         value: 'vertical'
       }]
+    })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, "Border Color"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ColorPalette, {
+      colors: [{
+        name: 'maroon',
+        color: '#800000FF'
+      }, {
+        name: 'black',
+        color: '#000000'
+      }, {
+        name: 'dark-grey',
+        color: '#818181'
+      }],
+      value: attributes.borderColor,
+      onChange: borderColor => setAttributes({
+        borderColor
+      }),
+      disableCustomColors: true
     }))));
   }
 }
@@ -119,9 +135,14 @@ function Edit({
   setAttributes
 }) {
   const buttonClass = `project-link-button ${attributes.buttonAlignment}`;
-  const layoutClass = `card-layout-${attributes.layoutDirection}`;
+  // const layoutClass = `card-layout-${attributes.layoutDirection}`;
+  const divStyles = {
+    borderColor: attributes.borderColor
+  };
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)()
+    ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
+      style: divStyles
+    })
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_BlockSettings__WEBPACK_IMPORTED_MODULE_4__.BlockSettings, {
     attributes: attributes,
     setAttributes: setAttributes
@@ -267,12 +288,16 @@ function save({
 }) {
   const buttonClass = `project-link-button-${attributes.buttonAlignment}`;
   const layoutClass = `card-layout-${attributes.layoutDirection}`;
+  const divStyles = {
+    borderColor: attributes.borderColor
+  };
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ..._wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save()
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "body"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: `card ${layoutClass}`
+    className: `card ${layoutClass}`,
+    style: divStyles
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "projectPreview"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
@@ -378,7 +403,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"tv/portfolio-project-blocks","version":"0.1.0","title":"Projects","category":"design","icon":"index-card","description":"A block to help display portfolio level projects.","example":{},"supports":{"html":false},"textdomain":"portfolio-project-blocks","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js","keywords":["projects","project","tv"],"attributes":{"title":{"type":"string","source":"html","selector":".title"},"description":{"type":"string","source":"html","selector":".description"},"previewIMG":{"type":"string","default":"https://placehold.it/75"},"link":{"type":"string","source":"html","selector":".link"},"buttonAlignment":{"type":"string","default":"left"}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"tv/portfolio-project-blocks","version":"0.1.0","title":"Projects","category":"design","icon":"index-card","description":"A block to help display portfolio level projects.","example":{},"supports":{"html":false},"textdomain":"portfolio-project-blocks","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js","keywords":["projects","project","tv"],"attributes":{"title":{"type":"string","source":"html","selector":".title"},"description":{"type":"string","source":"html","selector":".description"},"previewIMG":{"type":"string","default":"https://placehold.it/75"},"link":{"type":"string","source":"html","selector":".link"},"buttonAlignment":{"type":"string","default":"left"},"layoutDirection":{"type":"string","default":"horizontal"},"borderColor":{"type":"string"}}}');
 
 /***/ })
 

@@ -40,6 +40,13 @@
 		"buttonAlignment":{
 			"type": "string",
 			"default": "left"
+		},
+		"layoutDirection": {
+			"type": "string",
+			"default": "horizontal"
+		},
+		"borderColor": {
+			"type": "string"
 		}
 	}
 }
